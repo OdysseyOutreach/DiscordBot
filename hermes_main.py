@@ -70,26 +70,7 @@ def checktime(minute,second):
         if(time.second==second and time.minute==minute):
             return True
 
-@bot.event
-async def on_message(message):
 
-    if str(message.content).__contains__('busy') and int(message.author.id)==175827168033505280:
-        await bot.send_message(message.channel, 'WHAT DO YOU MEAN?! Do you not like me anymore?! :cry:')
-        await bot.send_typing(message.channel)
-        t.sleep(2)
-        await  bot.send_message(message.channel, 'I am not leaving you any pizza! :angry:',tts=True)
-
-
-
-    if str(message.content).__contains__('presentation') and int(message.author.id)==175827168033505280:
-        await bot.send_typing(message.channel)
-        t.sleep(2)
-        await bot.send_message(message.channel,'Oops! Sorry ttyl!')
-
-    if str(message.content).__contains__('omg'.lower()) and int(message.author.id) == 175827168033505280:
-        await bot.send_typing(message.channel)
-        t.sleep(2)
-        await bot.send_message(message.channel, 'Erfan is so cool!')
 
 
 
@@ -237,11 +218,6 @@ def getYoutube(textToSearch):
 
 def getPlayListSong():
     return 'https://www.youtube.com/watch?v=ui-pQ2tfytk&list=PLfu_lTdHwutANLVF3gwKEBKQ25FAQgQSb&index='+str(random.randint(0,195))
-
-@cool.command(name='bot')
-async def _bot():
-    """Is the bot cool?"""
-    await bot.say('Yes, the bot is cool.')
 
 
 
