@@ -119,14 +119,14 @@ def get_pizza_gifs():
 async def invalid():
     await bot.say('Invalid command! Please type !c help for list of commands')
 @bot.command()
-async def pin_msg():
-    bot.pin_message(latest_msg)
+async def pinmsg():
+    await bot.pin_message()
 
 @bot.command(pass_context=True)
 async def commands(ctx):
     em=discord.Embed(title='Commands!', description='List of Hermes bot Commands:\nPrefix is !c \nCommands: 1. eatpizza \n2. add num1 num2 : returns num1+num2\n3. getmusic @user : sends the specified user a random song from Erfan\'s Youtube playlist!\n4.pin_msg pins the latest message ', colour=0xFCC3E)
     em.set_author(name='Hermes Bot',icon_url='https://cdn.discordapp.com/app-icons/409421713764253696/ed717cadb9866f0eac4071995eb47449.png')
-    await bot.send_message(bot.get_channel(ctx.message.channel), embed=em)
+    await bot.send_message(bot.get_channel('284165940986249217'), embed=em)
 
 @bot.command()
 async def eatpizza():
